@@ -36,7 +36,7 @@ function Addvideo() {
         formData.append('title', productData.title);
         formData.append('description', productData.description);
 
-        axios.post('http://localhost:5500/addvideo', formData)
+        axios.post('https://filmmaker-api.vercel.app/addvideo', formData)
             .then((Response) => {
                 if (Response.data == "1") {
                     navigate('/');
