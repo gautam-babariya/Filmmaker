@@ -26,19 +26,19 @@ const AboutUs = () => {
                     </header>
                     <main className="app-main">
                         <section className="team-section center">
-                            <p className='name_class'>ㅤㅤㅤㅤㅤMy Nameㅤㅤㅤㅤㅤ<span class="fancy">Karan Gosai</span></p>
+                            <p className='name_class'>ㅤㅤㅤㅤㅤMy Nameㅤㅤㅤㅤㅤ</p><span class="fancy">Karan Gosai</span>
                         </section>
 
                         <section className="team-section center">
-                            <p className='name_class'>ㅤㅤㅤMobile Numberㅤㅤㅤ<span class="fancy">9904863345</span></p>
+                            <p className='name_class'>ㅤㅤㅤMobile Numberㅤㅤㅤ</p><span class="fancy">9904863345</span>
                         </section>
 
                         <section className="team-section center">
-                            <p className='name_class'>ㅤㅤㅤㅤEmail idㅤㅤㅤㅤ<span class="fancy">gosaikaran903@gmail.com</span></p>
+                            <p className='name_class'>ㅤㅤㅤㅤEmail idㅤㅤㅤㅤ</p><span class="fancy">gosaikaran903@gmail.com</span>
                         </section>
                         
                         <section className="team-section center">
-                            <p className='name_class'>ㅤㅤㅤㅤㅤㅤLocationㅤㅤㅤㅤㅤㅤ<span class="fancy">Hamapur, Bagasara, Amreli, Gujarat</span></p>
+                            <p className='name_class'>ㅤㅤㅤㅤㅤㅤLocationㅤㅤㅤㅤㅤㅤ</p><span class="fancy">Hamapur, Bagasara, Amreli, Gujarat</span>
                         </section>
 
                     </main>
