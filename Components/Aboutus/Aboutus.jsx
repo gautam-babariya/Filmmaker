@@ -26,7 +26,7 @@ const AboutUs = () => {
                     </header>
                     <main className="app-main">
                         <section className="team-section center">
-                            <p className='name_class'>ㅤㅤㅤㅤㅤMy Nameㅤㅤㅤㅤㅤㅤㅤ<span class="fancy">Karan Gosai</span></p>
+                            <p className='name_class'>ㅤㅤㅤㅤㅤMy Nameㅤㅤㅤㅤㅤ<span class="fancy">Karan Gosai</span></p>
                         </section>
 
                         <section className="team-section center">
@@ -38,7 +38,7 @@ const AboutUs = () => {
                         </section>
                         
                         <section className="team-section center">
-                            <p className='name_class'>ㅤㅤㅤㅤㅤLocationㅤㅤㅤㅤㅤㅤ<span class="fancy">Hamapur, Bagasara, Amreli, Gujarat</span></p>
+                            <p className='name_class'>ㅤㅤㅤㅤㅤㅤLocationㅤㅤㅤㅤㅤㅤ<span class="fancy">Hamapur, Bagasara, Amreli, Gujarat</span></p>
                         </section>
 
                     </main>
