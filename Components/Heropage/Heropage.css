@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+.videocard_class {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    height: fit-content;
+    padding: 1%;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1100px) {
+    .videocard_class {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        height: fit-content;
+        padding: 3%;
+        width: 100% !important;
+        background-color: black;
+        color: white;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        border: 1px solid white;
+        margin-top: 2rem;
+    }
+}
+
+.divofvideo_class{
+    width: 50%;
+    height: 100%;
+}
+@media only screen and (max-width: 1100px) {
+    .divofvideo_class{
+        width: 100%;
+        height: 100%;
+    }
+
+}
+.video_class {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position:relative;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 1100px) {
+    .video_class {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+
+}
+
+.divofcard_class {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    padding-top: 70px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .divofcard_class {
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 7rem;
+    }
+}
+
+.bodyofvideo_class {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-size: larger;
+    font-style: normal;
+    padding: 2rem;
+}
+
+@media only screen and (max-width: 1100px) {
+    .bodyofvideo_class {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        font-family: "Kode Mono", monospace;
+        font-optical-sizing: auto;
+        font-weight: 200;
+        font-size: larger;
+        font-style: normal;
+        padding: 0;
+    }
+}
+
+.titleofvideo_class {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-size: xx-large;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* border css  */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+
+.block {
+    position: relative;
+    background: linear-gradient(0deg, #000, #272727);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    height: 22rem;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 500px) {
+    .block {
+        position: relative;
+        background: linear-gradient(0deg, #000, #272727);
+        border-radius: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        height: 14rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.block:before,
+.block:after {
+    content: '';
+    position: absolute;
+    border-radius: 1rem;
+    /* left: -2px;
+    top: -2px; */
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094,
+            #0000ff, #00ff00, #ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    /* z-index: -1; */
+    animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.block:after {
+    filter: blur(22px);
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+.divofabout_class{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.paragrafofabout_class{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.app-header{
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.about-section{
+    margin-bottom: 1.5rem;
+}
+.team-section{
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (max-width: 1200px) {
+  .team-section{
+    margin-bottom: 1.5rem;
+}
+}
+
+
+  .divofabout_class{
+    background: #000405;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 900; 
+    font-family: 'Work Sans', sans-serif;
+  }
+  
+  .name_class{
+    font-size: 6vw;
+    text-align: center;
+    line-height: 1;
+    font-family: "Merriweather", serif;
+  }
+  .fancy {
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+      background-image: 
+        url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+      background-size: 110% auto;
+      background-position: center;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      font-size: 4vw;
+    }
+  }
