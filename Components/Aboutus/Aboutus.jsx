@@ -26,7 +26,7 @@ const AboutUs = () => {
                     </header>
                     <main className="app-main">
                         <section className="team-section center">
-                            <p className='name_class'>ㅤㅤㅤㅤㅤMy Nameㅤㅤㅤㅤㅤㅤ<span class="fancy">Karan Gosai</span></p>
+                            <p className='name_class'>ㅤㅤㅤㅤㅤMy Nameㅤㅤㅤㅤㅤㅤㅤ<span class="fancy">Karan Gosai</span></p>
                         </section>
 
                         <section className="team-section center">
