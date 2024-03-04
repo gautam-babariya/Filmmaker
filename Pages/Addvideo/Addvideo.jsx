@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import './Addvideo.css'
 
 function Addvideo() {
     const navigate = useNavigate();
@@ -44,24 +45,24 @@ function Addvideo() {
     }
     return (
         <>
-
-            <select value={selectedOption} onChange={handleSelectChange}>
+        <div className='managepage_class'>
+            <select className='selectopt_class' value={selectedOption} onChange={handleSelectChange}>
                 <option value="Teaser">Teaser</option>
                 <option value="Highlights">Highlights</option>
                 <option value="Reels">Reels</option>
             </select>
 
-            <label htmlFor="Video">Video</label>
-            <input type="file" accept="video/mp4" name="file" onChange={(e) => setfile(e.target.files[0])} />
+            <label className='label_class' htmlFor="Video">Video</label>
+            <input className='input_class' type="file" accept="video/mp4" name="file" onChange={(e) => setfile(e.target.files[0])} />
 
-            <label htmlFor="title">title</label>
-            <input type="text" name="title" value={DataTransferItem.title} onChange={handleChange} />
+            <label className='label_class' htmlFor="title">title</label>
+            <input className='input_class' type="text" name="title" value={DataTransferItem.title} onChange={handleChange} />
 
-            <label htmlFor="description">desc</label>
-            <input type="text" name="description" value={data.desc} onChange={handleChange} />
+            <label className='label_class' htmlFor="description">desc</label>
+            <input className='input_class' type="text" name="description" value={data.desc} onChange={handleChange} />
 
-            <button type='submit' onClick={uplode} >ok</button>
-
+            <button className='botton_class' type='submit' onClick={uplode} >ok</button>
+            </div>
         </>
     )
 }

@@ -1,0 +1,28 @@
+.managepage_class{
+    width: 100vw;
+    height: 100ch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+}
+.label_class{
+    margin-top: 2rem;
+}
+.input_class{
+    width: 50vw;
+    height: 3rem;
+    border: 2px solid black;
+}
+.selectopt_class{
+    width: 50vw;
+    height: 3rem;
+    border: 2px solid black;
+}
+.botton_class{
+    width: 50vw;
+    height: 3rem;
+    border: 2px solid black;
+    margin-top: 2rem;
+}
