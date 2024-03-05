@@ -61,8 +61,8 @@ function Addvideo() {
             <label className='label_class' htmlFor="description">desc</label>
             <input className='input_class' type="text" name="description" value={data.desc} onChange={handleChange} />
 
-            <button className='botton_class' type='submit' onClick={uplode} >ok</button>
             </div>
+            <button className='botton_class' type='submit' onClick={uplode} >ok</button>
         </>
     )
 }
