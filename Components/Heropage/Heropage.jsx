@@ -61,7 +61,7 @@ function heropage() {
             </Card.Body>
           </Card>
         ) : null}
-          {console.log(objectIdTofind)}
+          
         {undefined === objectIdTofind ? (
           <Card className='videocard_class' style={{ width: windowSize[0] / 1.2 }}>
             <div className='divofvideo_class'>
