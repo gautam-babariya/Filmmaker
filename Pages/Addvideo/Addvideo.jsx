@@ -23,6 +23,11 @@ function Addvideo() {
     const handleSelectChange = (event) => {
         setSelectedOption(event.target.value);
     };
+    const headers = {
+        'Content-Type': 'multipart/form-data', // Adjust content type based on your API requirements
+        // 'Authorization': 'Bearer yourAccessToken', // Include any necessary authorization headers
+        // Add other headers as needed
+      };
 
     const uplode = (e) => {
         e.preventDefault();
@@ -35,7 +40,6 @@ function Addvideo() {
         formData.append('video', file);
         formData.append('title', productData.title);
         formData.append('description', productData.description);
-
         axios.post('https://filmmaker-api.vercel.app/addvideo', formData)
             .then((Response) => {
                 if (Response.data == "1") {
@@ -45,15 +49,15 @@ function Addvideo() {
     }
     return (
         <>
-        <div className='managepage_class'>
+        {/* <div className='managepage_class'> */}
             <select className='selectopt_class' value={selectedOption} onChange={handleSelectChange}>
                 <option value="Teaser">Teaser</option>
                 <option value="Highlights">Highlights</option>
                 <option value="Reels">Reels</option>
             </select>
 
-            <label className='label_class' htmlFor="Video">Video</label>
-            <input className='input_class' type="file" accept="video/mp4" name="file" onChange={(e) => setfile(e.target.files[0])} />
+            <label className='label_class' htmlFor="video">Video</label>
+            <input className='input_class' type="file" accept="video/mp4" name="video" onChange={(e) => setfile(e.target.files[0])} />
 
             <label className='label_class' htmlFor="title">title</label>
             <input className='input_class' type="text" name="title" value={DataTransferItem.title} onChange={handleChange} />
@@ -61,7 +65,7 @@ function Addvideo() {
             <label className='label_class' htmlFor="description">desc</label>
             <input className='input_class' type="text" name="description" value={data.desc} onChange={handleChange} />
 
-            </div>
+            {/* </div> */}
             <button className='botton_class' type='submit' onClick={uplode} >ok</button>
         </>
     )
