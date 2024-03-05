@@ -25,7 +25,7 @@ function Addvideo() {
     };
     const headers = {
         'Content-Type': 'multipart/form-data', // Adjust content type based on your API requirements
-        // 'Authorization': 'Bearer yourAccessToken', // Include any necessary authorization headers
+        'Authorization': 'Bearer yourAccessToken', // Include any necessary authorization headers
         // Add other headers as needed
       };
 
@@ -40,7 +40,7 @@ function Addvideo() {
         formData.append('video', file);
         formData.append('title', productData.title);
         formData.append('description', productData.description);
-        axios.post('https://filmmaker-api.vercel.app/addvideo', formData)
+        axios.post('https://filmmaker-api.vercel.app/addvideo', formData, {headers})
             .then((Response) => {
                 if (Response.data == "1") {
                     navigate('/');
