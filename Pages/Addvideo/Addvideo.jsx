@@ -40,7 +40,7 @@ function Addvideo() {
         formData.append('video', file);
         formData.append('title', productData.title);
         formData.append('description', productData.description);
-        axios.post('https://filmmaker-api.vercel.app/addvideo', formData, {headers})
+        axios.post('https://filmmaker-api.vercel.app/addvideo', formData)
             .then((Response) => {
                 if (Response.data == "1") {
                     navigate('/');
