@@ -25,21 +25,7 @@ function heropage() {
   return (
     <>
       <div className='divofcard_class'>
-        <Card className='videocard_class' style={{ width: windowSize[0] / 1.2 }}>
-          <div className='divofvideo_class'>
-            <div className="block">
-              <video className='video_class' variant="top" controls  >
-                <source src={video1} type="video/mp4" />
-              </video>
-            </div>
-          </div>
-          <Card.Body className='bodyofvideo_class'>
-            <Card.Title className='titleofvideo_class'>The Developer</Card.Title>
-            <Card.Text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia minus velit reprehenderit saepe, accusantium at architecto illo nesciunt voluptates magni harum voluptatem perspiciatis aperiam praesentium laboriosam cum non excepturi commodi, veniam enim ullam rem reiciendis omnis dicta. Officia, inventore enim.
-            </Card.Text>
-          </Card.Body>
-        </Card>
+       
 
         {productdetail.map(item => (
         <div key={item.id}>
