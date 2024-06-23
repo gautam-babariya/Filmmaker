@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import './Addvideo.css'
+import { useEffect , useRef } from 'react';
 
 function Addvideo() {
     const navigate = useNavigate();
@@ -48,9 +49,24 @@ function Addvideo() {
                 }
             })
     }
+
+    const cloudinaryRef = useRef();
+    const widgetref = useRef();
+    useEffect(() => {
+            cloudinaryRef.current = window.cloudinary;
+            widgetref.current = cloudinaryRef.current.createUploadWidget({
+                cloudName: 'delde3vvw',
+                uploadPreset: 'sebxw9jr'
+            }, function(err,res){
+                console.log(res);
+            });
+    }, [])
     return (
         <>
         {/* <div className='managepage_class'> */}
+        <button onClick={()=> widgetref.current.open()}>
+                Uplode
+        </button>
             <select className='selectopt_class' value={selectedOption} onChange={handleSelectChange}>
                 <option value="Teaser">Teaser</option>
                 <option value="Highlights">Highlights</option>
