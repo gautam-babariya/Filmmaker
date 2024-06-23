@@ -24,25 +24,20 @@ function Addvideo() {
     const handleSelectChange = (event) => {
         setSelectedOption(event.target.value);
     };
-    const headers = {
-        'Content-Type': 'multipart/form-data', // Adjust content type based on your API requirements
-        'Authorization': 'Bearer yourAccessToken', // Include any necessary authorization headers
-        // Add other headers as needed
-      };
-
+   
     const uplode = (e) => {
         e.preventDefault();
         const productData = {
             title: data.title,
             description: data.description,
         };
+        const storedVideoUrl = localStorage.getItem('uploadedVideoUrl');
         const formData = new FormData();
         formData.append('type', selectedOption);
-        formData.append('video', file);
+        formData.append('video', storedVideoUrl);
         formData.append('title', productData.title);
         formData.append('description', productData.description);
         axios.post('https://filmmaker-api.vercel.app/addvideo', formData)
-        // axios.post('http://localhost:5500/addvideo', formData)
             .then((Response) => {
                 if (Response.data == "1") {
                     navigate('/');
@@ -57,24 +52,25 @@ function Addvideo() {
             widgetref.current = cloudinaryRef.current.createUploadWidget({
                 cloudName: 'delde3vvw',
                 uploadPreset: 'sebxw9jr'
-            }, function(err,res){
-                console.log(res);
+            }, function(error,result){
+                if (!error && result && result.event === "success") {
+                  localStorage.setItem('uploadedVideoUrl', result.info.secure_url);
+                } else if (error) {
+                  console.error('Error during upload:', error);
+                }
             });
     }, [])
     return (
         <>
         {/* <div className='managepage_class'> */}
         <button onClick={()=> widgetref.current.open()}>
-                Uplode
+                Uplode video
         </button>
             <select className='selectopt_class' value={selectedOption} onChange={handleSelectChange}>
                 <option value="Teaser">Teaser</option>
                 <option value="Highlights">Highlights</option>
                 <option value="Reels">Reels</option>
             </select>
-
-            <label className='label_class' htmlFor="video">Video</label>
-            <input className='input_class' type="file" accept="video/mp4" name="video" onChange={(e) => setfile(e.target.files[0])} />
 
             <label className='label_class' htmlFor="title">title</label>
             <input className='input_class' type="text" name="title" value={DataTransferItem.title} onChange={handleChange} />
