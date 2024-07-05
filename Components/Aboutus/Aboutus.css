@@ -71,8 +71,8 @@
       font-size: 4vw;
     /* } */
   }
-.textaboutus{
-  margin-bottom: 2rem;
+.textabout{
+  margin-bottom: 2rem !important;
   font-weight: 100;
-  font-size: larger;
+  font-size:x-large
 }  

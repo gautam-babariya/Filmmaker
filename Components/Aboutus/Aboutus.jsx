@@ -22,9 +22,9 @@ const AboutUs = () => {
             <animated.p  style={paragraphProps}>
                 <div className="app paragrafofabout_class">
                     <header className="app-header center">
-                        <h1>About Us</h1>
+                        <h1 className='name_class'>About Us</h1>
                     </header>
-                <div className='textaboutus'>
+                <div className='name_class textabout'>
                     Soft Skill: Adobe Premiere Pro
                 </div>
                     <main className="app-main">
