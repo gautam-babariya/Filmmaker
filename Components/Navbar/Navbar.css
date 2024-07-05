@@ -89,6 +89,7 @@ a:hover:after {
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+  font-family: "Merriweather", serif;
 }
 .options_class{
   font-family: "Montserrat", sans-serif;
