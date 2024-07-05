@@ -24,6 +24,9 @@ const AboutUs = () => {
                     <header className="app-header center">
                         <h1>About Us</h1>
                     </header>
+                <div className='textaboutus'>
+                    Soft Skill: Adobe Premiere Pro
+                </div>
                     <main className="app-main">
                         <section className="team-section center">
                             <p className='name_class'>ㅤㅤㅤㅤㅤMy Nameㅤㅤㅤㅤㅤ</p><span class="fancy">Goswami Karan</span>
