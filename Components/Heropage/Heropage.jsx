@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './Heropage.css'
-import video1 from '../accets/croped.mp4'
 import Card from 'react-bootstrap/Card';
 import axios from "axios";
 import { useParams } from 'react-router-dom';
