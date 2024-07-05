@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.css'
-import logo from '../accets/logo.jpg'
+import logo from '../accets/shiv_studio.jpg'
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 function Navbar() {
