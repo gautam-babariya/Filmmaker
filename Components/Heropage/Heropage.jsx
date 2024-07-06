@@ -51,7 +51,7 @@ function heropage() {
           <Card className='videocard_class' style={{ width: windowSize[0] / 1.2 }}>
             <div className='divofvideo_class'>
               <div className="block">
-                <video className='video_class' variant="top" controls>
+                <video className='video_class' variant="top" controls controlsList="nodownload">
                   <source src={`${item.video}`} />
                 </video>
               </div>
