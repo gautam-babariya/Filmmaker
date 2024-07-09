@@ -3,6 +3,7 @@ import './Heropage.css'
 import Card from 'react-bootstrap/Card';
 import axios from "axios";
 import { useParams } from 'react-router-dom';
+import logo from '../accets/shiv_studio.jpg'
 
 function heropage() {
   // find windows height and width 
@@ -16,24 +17,21 @@ function heropage() {
   var { id } = useParams();
   var objectIdTofind = id;
   useEffect(() => {
-    axios.get('https://filmmaker-api.vercel.app/getvideo')
-    // axios.get('http://localhost:5500/getvideo')
+    // axios.get('https://filmmaker-api.vercel.app/getvideo')
+    axios.get('http://localhost:5500/getvideo')
     .then(async (res) => setproductdetain(res.data)
     );
   }, []);
   return (
     <>
       <div className='divofcard_class'>
-       
-
         {productdetail.map(item => (
         <div key={item.id}>
-    
         {item.type === objectIdTofind ? (
           <Card className='videocard_class' style={{ width: windowSize[0] / 1.2 }}>
             <div className='divofvideo_class'>
               <div className="block">
-                <video className='video_class' variant="top" controls>
+                <video className='video_class' variant="top" controlsList="nodownload" controls poster={`${item.poster}`}>
                   <source src={`${item.video}`} />
                 </video>
               </div>
@@ -51,7 +49,7 @@ function heropage() {
           <Card className='videocard_class' style={{ width: windowSize[0] / 1.2 }}>
             <div className='divofvideo_class'>
               <div className="block">
-                <video className='video_class' variant="top" controls controlsList="nodownload">
+                <video className='video_class' variant="top" controls controlsList="nodownload" poster={`${item.poster}`}>
                   <source src={`${item.video}`} />
                 </video>
               </div>

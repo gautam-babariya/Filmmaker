@@ -32,12 +32,15 @@ function Addvideo() {
             description: data.description,
         };
         const storedVideoUrl = localStorage.getItem('uploadedVideoUrl');
+        const storedimageUrl = localStorage.getItem('uploadedimageUrl');
         const formData = new FormData();
         formData.append('type', selectedOption);
         formData.append('video', storedVideoUrl);
+        formData.append('poster', storedimageUrl);
         formData.append('title', productData.title);
         formData.append('description', productData.description);
-        axios.post('https://filmmaker-api.vercel.app/addvideo', formData)
+        // axios.post('https://filmmaker-api.vercel.app/addvideo', formData)
+        axios.post('http://localhost:5500/addvideo', formData)
             .then((Response) => {
                 if (Response.data == "1") {
                     navigate('/');
@@ -60,17 +63,37 @@ function Addvideo() {
                 }
             });
     }, [])
+    const cloudinaryref = useRef();
+    const widgetRef = useRef();
+    useEffect(() => {
+            cloudinaryref.current = window.cloudinary;
+            widgetRef.current = cloudinaryref.current.createUploadWidget({
+                cloudName: 'delde3vvw',
+                uploadPreset: 'sebxw9jr'
+            }, function(error,result){
+                if (!error && result && result.event === "success") {
+                  localStorage.setItem('uploadedimageUrl', result.info.secure_url);
+                } else if (error) {
+                  console.error('Error during upload:', error);
+                }
+            });
+    }, [])
     return (
         <>
         {/* <div className='managepage_class'> */}
         <button onClick={()=> widgetref.current.open()}>
                 Uplode video
         </button>
+        <button onClick={()=> widgetRef.current.open()}>
+                Uplode image
+        </button>
             <select className='selectopt_class' value={selectedOption} onChange={handleSelectChange}>
                 <option value="Teaser">Teaser</option>
                 <option value="Highlights">Highlights</option>
                 <option value="Reels">Reels</option>
             </select>
+
+            {/* <input type="file" name="poster" onChange={(e) => setposter(e.target.files[0])}></input> */}
 
             <label className='label_class' htmlFor="title">title</label>
             <input className='input_class' type="text" name="title" value={DataTransferItem.title} onChange={handleChange} />
