@@ -10,7 +10,10 @@ function Navbar() {
                 <div class="container-fluid">
                     <div className='divofbrand_class'>
                         <img className='navlogo_class' src={logo}></img>
+                        <div className='header_div_class'>
                         <a className="brandname_class" href="/">Fillmmaker</a>
+                        <h4 className="ownername_class">Goswami Karan</h4>
+                        </div>
                     </div>
                     <button class="navbar-toggler buttonline_class" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon threeline_class"></span>

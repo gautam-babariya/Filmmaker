@@ -101,3 +101,13 @@ a:hover:after {
     filter: invert(100%);
     width: 2.5rem;
 }
+.ownername_class{
+  color: white;
+  font-size: small;
+}
+.header_div_class{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
