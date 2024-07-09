@@ -17,7 +17,7 @@ function heropage() {
   var objectIdTofind = id;
   useEffect(() => {
     axios.get('https://filmmaker-api.vercel.app/getvideo')
-    // https://filmmaker-api.vercel.app/getvideo
+    // axios.get('http://localhost:5500/getvideo')
     .then(async (res) => setproductdetain(res.data)
     );
   }, []);
