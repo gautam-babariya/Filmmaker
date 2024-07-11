@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import logo from '../accets/shiv_studio.jpg'
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
@@ -21,19 +22,19 @@ function Navbar() {
                     <div class="collapse navbar-collapse divofmenu_class" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 divofmenu_class">
                             <li class="nav-item">
-                                <a class="nav-link active options_class" aria-current="page" href="/">Home</a>
+                                <Link class="nav-link active options_class" aria-current="page" to="/">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link options_class" href="/Reels">Reels</a>
+                                <Link class="nav-link options_class" to="/Reels">Reels</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link options_class" href="/Teaser">Teaser</a>
+                                <Link class="nav-link options_class" to="/Teaser">Teaser</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link options_class" href="/Highlights">Highlights</a>
+                                <Link class="nav-link options_class" to="/Highlights">Highlights</Link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link options_class" href="/Aboutus">About us</a>
+                                <Link class="nav-link options_class" to="/Aboutus">About us</Link>
                             </li>
                         </ul>
                     </div>
