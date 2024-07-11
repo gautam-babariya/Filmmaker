@@ -85,11 +85,14 @@ a:hover:after {
 }
 .brandname_class{
   font-size: xx-large;
+  color:white;
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   font-family: "Merriweather", serif;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .options_class{
   font-family: "Montserrat", sans-serif;

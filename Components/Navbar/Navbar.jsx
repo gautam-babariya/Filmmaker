@@ -11,7 +11,7 @@ function Navbar() {
                     <div className='divofbrand_class'>
                         <img className='navlogo_class' src={logo}></img>
                         <div className='header_div_class'>
-                        <a className="brandname_class" href="/">Fillmmaker</a>
+                        <h1 className="brandname_class" href="/">Fillmmaker</h1>
                         <h4 className="ownername_class">Goswami Karan</h4>
                         </div>
                     </div>
