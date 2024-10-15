@@ -99,6 +99,9 @@ a:hover:after {
   .brandname_class{
     font-size: x-large;
   }
+  .navlogo_class{
+    padding: 5px;
+  }
 }
 .options_class{
   font-family: "Montserrat", sans-serif;
