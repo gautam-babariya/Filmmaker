@@ -26,11 +26,11 @@ function heropage() {
     <>
       <div className='divofcard_class'>
         {productdetail.map(item => (
-        <div key={item.id}>
+        <div key={item.id} className='hiddendiv'>
         {item.type === objectIdTofind ? (
           <Card className='videocard_class' style={{ width: windowSize[0] / 1.2 }}>
             <div className='divofvideo_class'>
-              <div className="block">
+              <div className="block"> 
                 <video className='video_class' variant="top" controlsList="nodownload" controls poster={`${item.poster}`}>
                   <source src={`${item.video}`} />
                 </video>
