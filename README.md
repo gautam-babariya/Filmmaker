@@ -29,4 +29,4 @@ To run this project locally, follow these steps:
 
 1. Clone the repository(Front):
    ```bash
-   git clone https://github.com/your-username/studio-website.git
+   git clone https://github.com/gautam-babariya/Filmmaker.git
