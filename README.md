@@ -27,6 +27,9 @@ The studio website serves as a portfolio to highlight video editing work, presen
 
 To run this project locally, follow these steps:
 
-1. Clone the repository(Front):
+1. Clone the repository(Front-end):
    ```bash
    git clone https://github.com/gautam-babariya/Filmmaker.git
+2. Clone the repository(Back-end):
+   ```bash
+   git clone https://github.com/gautam-babariya/Studioweb.git   
