@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom';
 import logo from '../accets/shiv_studio.jpg'
 
 function heropage() {
+  const apiUrl = import.meta.env.VITE_GET_VIDEO_FROM_BACKEND; 
+ 
   // find windows height and width 
   // windowSize[0] == width
   // windowSize[1] == height
@@ -17,7 +19,7 @@ function heropage() {
   var { id } = useParams();
   var objectIdTofind = id;
   useEffect(() => {
-    axios.get('https://filmmaker-api.vercel.app/getvideo')
+    axios.get(apiUrl)
     // axios.get('http://localhost:5500/getvideo')
     .then(async (res) => setproductdetain(res.data)
     );

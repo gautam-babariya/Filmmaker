@@ -39,7 +39,8 @@ function Addvideo() {
         formData.append('poster', storedimageUrl);
         formData.append('title', productData.title);
         formData.append('description', productData.description);
-        axios.post('https://filmmaker-api.vercel.app/addvideo', formData)
+        const addvideoapi = import.meta.env.VITE_ADD_VIDEO_IN_BACKEND;
+        axios.post(addvideoapi, formData)
         // axios.post('http://localhost:5500/addvideo', formData)
             .then((Response) => {
                 if (Response.data == "1") {
@@ -50,11 +51,14 @@ function Addvideo() {
 
     const cloudinaryRef = useRef();
     const widgetref = useRef();
+    const cloude_name = import.meta.env.VITE_CLOUD_NAME;
+    const uploadpresent = import.meta.env.VITE_CLOUD_UPLOADPRESENT;
+
     useEffect(() => {
             cloudinaryRef.current = window.cloudinary;
             widgetref.current = cloudinaryRef.current.createUploadWidget({
-                cloudName: 'delde3vvw',
-                uploadPreset: 'sebxw9jr'
+                cloudName: cloude_name,
+                uploadPreset: uploadpresent
             }, function(error,result){
                 if (!error && result && result.event === "success") {
                   localStorage.setItem('uploadedVideoUrl', result.info.secure_url);
@@ -68,8 +72,8 @@ function Addvideo() {
     useEffect(() => {
             cloudinaryref.current = window.cloudinary;
             widgetRef.current = cloudinaryref.current.createUploadWidget({
-                cloudName: 'delde3vvw',
-                uploadPreset: 'sebxw9jr'
+                cloudName: cloude_name,
+                uploadPreset: uploadpresent
             }, function(error,result){
                 if (!error && result && result.event === "success") {
                   localStorage.setItem('uploadedimageUrl', result.info.secure_url);
