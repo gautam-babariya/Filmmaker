@@ -26,3 +26,20 @@
     border: 2px solid black;
     margin-top: 2rem;
 }
+.divofaddvideo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}
+.buttonuplode{
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    /* width: 2rem; */
+    padding: 1rem !important;
+    border-radius: 2rem !important;
+}
+.label_class{
+    color: white;
+}

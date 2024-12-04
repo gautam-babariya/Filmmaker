@@ -25,9 +25,6 @@ function Navbar() {
                                 <Link class="nav-link active options_class" aria-current="page" to="/">Home</Link>
                             </li>
                             <li class="nav-item">
-                                <Link class="nav-link options_class" to="/Reels">Reels</Link>
-                            </li>
-                            <li class="nav-item">
                                 <Link class="nav-link options_class" to="/Teaser">Teaser</Link>
                             </li>
                             <li class="nav-item">

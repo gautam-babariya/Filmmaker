@@ -84,17 +84,17 @@ function Addvideo() {
     }, [])
     return (
         <>
+        <div className='divofaddvideo'>
         {/* <div className='managepage_class'> */}
-        <button onClick={()=> widgetref.current.open()}>
+        <button className='buttonuplode' onClick={()=> widgetref.current.open()}>
                 Uplode video
         </button>
-        <button onClick={()=> widgetRef.current.open()}>
+        <button className='buttonuplode' onClick={()=> widgetRef.current.open()}>
                 Uplode image
         </button>
             <select className='selectopt_class' value={selectedOption} onChange={handleSelectChange}>
                 <option value="Teaser">Teaser</option>
                 <option value="Highlights">Highlights</option>
-                <option value="Reels">Reels</option>
             </select>
 
             {/* <input type="file" name="poster" onChange={(e) => setposter(e.target.files[0])}></input> */}
@@ -106,7 +106,8 @@ function Addvideo() {
             <input className='input_class' type="text" name="description" value={data.desc} onChange={handleChange} />
 
             {/* </div> */}
-            <button className='botton_class' type='submit' onClick={uplode} >ok</button>
+            <button className='botton_class divofaddvideo' type='submit' onClick={uplode} >Upload</button>
+            </div>
         </>
     )
 }
